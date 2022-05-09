@@ -1,0 +1,18 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 586 212" width="586" height="212">
+	<title>New Project</title>
+	<defs>
+		<image  width="1050" height="600" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABBoAAAJYAQMAAAD2UhdBAAAAAXNSR0IB2cksfwAAAANQTFRF////p8QbyAAAAGRJREFUeJztwTEBAAAAwqD1T20JT6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHgaN8cAAayVFNsAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		tspan { white-space:pre } 
+		.t0 { font-size: 150px;fill: #000000;font-weight: 400;font-family: "Arimo-Regular", "Arimo" } 
+		.t1 { font-size: 150px;fill: #ff9900;font-weight: 400;font-family: "Arimo-Regular", "Arimo" } 
+	</style>
+	<use id="Background" href="#img1" x="-179" y="-58"/>
+	<text id="Kindle." style="transform: matrix(1,0,0,1,63,147)" >
+		<tspan x="0" y="0" class="t0">Kindle</tspan><tspan  y="0" class="t1">.</tspan><tspan  y="0" class="t1">
+</tspan>
+	</text>
+	<text id="" style="transform: matrix(1,0,0,1,501,317)" >
+	</text>
+</svg>
