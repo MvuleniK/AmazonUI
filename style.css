@@ -297,7 +297,7 @@
         padding-left: 180px;
         margin-right: 50px;
         position: relative;
-        margin-top: 160px;
+        margin-top: 120px;
     }
     
     .columnReleases {
@@ -432,3 +432,221 @@
         margin-bottom: 20px;
     }
     /**********************************************************************************************************************************/
+    
+    .scrollRecentbooks {
+        display: flex;
+        overflow-y: hidden;
+        position: relative;
+        top: -10rem;
+        height: 40rem;
+        background-color: transparent;
+    }
+    
+    .rowImagecontainer {
+        height: 10rem;
+        background-color: blue;
+        width: 50rem;
+        border-radius: 40px;
+        position: absolute;
+        left: 10rem;
+        bottom: 10rem;
+    }
+    
+    .columnSlidefade {
+        position: absolute;
+        width: 20rem;
+        height: 10rem;
+        top: 3rem;
+        left: 18rem;
+        border-radius: 10px;
+        color: white;
+    }
+    
+    .columnSlidefade p {}
+    
+    #bookCover img {
+        width: 150px;
+        height: 250px;
+        border-radius: 40px;
+    }
+    
+    #bookCover {
+        position: absolute;
+        left: -15rem;
+        top: -10rem;
+    }
+    /*--------------------------------------------------------*/
+    
+    .rowImagecontainer1 {
+        height: 10rem;
+        background-color: blue;
+        width: 50rem;
+        border-radius: 40px;
+        position: absolute;
+        left: 70rem;
+        bottom: 10rem;
+    }
+    
+    .columnSlidefade1 {
+        position: absolute;
+        width: 20rem;
+        height: 10rem;
+        top: 3rem;
+        left: 18rem;
+        border-radius: 10px;
+        color: white;
+    }
+    
+    .columnSlidefade1 p {}
+    
+    #bookCover1 img {
+        width: 150px;
+        height: 250px;
+        border-radius: 40px;
+    }
+    
+    #bookCover1 {
+        position: absolute;
+        left: -15rem;
+        top: -10rem;
+    }
+    /*--------------------------------------------------------*/
+    
+    .rowImagecontainer2 {
+        height: 10rem;
+        background-color: blue;
+        width: 50rem;
+        border-radius: 40px;
+        position: absolute;
+        left: 190rem;
+        bottom: 10rem;
+    }
+    
+    .columnSlidefade2 {
+        position: absolute;
+        width: 20rem;
+        height: 10rem;
+        top: 3rem;
+        left: 18rem;
+        border-radius: 10px;
+        color: white;
+    }
+    
+    .columnSlidefade2 p {}
+    
+    #bookCover2 img {
+        width: 150px;
+        height: 250px;
+        border-radius: 40px;
+    }
+    
+    #bookCover2 {
+        position: absolute;
+        left: -15rem;
+        top: -10rem;
+    }
+    /*--------------------------------------------------------*/
+    
+    .rowImagecontainer3 {
+        height: 10rem;
+        background-color: blue;
+        width: 50rem;
+        border-radius: 40px;
+        position: absolute;
+        left: 130rem;
+        bottom: 10rem;
+    }
+    
+    .columnSlidefade3 {
+        position: absolute;
+        width: 20rem;
+        height: 10rem;
+        top: 3rem;
+        left: 18rem;
+        border-radius: 10px;
+        color: white;
+    }
+    
+    .columnSlidefade3 p {}
+    
+    #bookCover3 img {
+        width: 150px;
+        height: 250px;
+        border-radius: 40px;
+    }
+    
+    #bookCover3 {
+        position: absolute;
+        left: -15rem;
+        top: -10rem;
+    }
+    /*--------------------------------------------------------*/
+    
+    .rowImagecontainer4 {
+        height: 10rem;
+        background-color: blue;
+        width: 50rem;
+        border-radius: 40px;
+        position: absolute;
+        left: 250rem;
+        bottom: 10rem;
+    }
+    
+    .columnSlidefade4 {
+        position: absolute;
+        width: 20rem;
+        height: 10rem;
+        top: 3rem;
+        left: 18rem;
+        border-radius: 10px;
+        color: white;
+    }
+    
+    .columnSlidefade4 p {}
+    
+    #bookCover4 img {
+        width: 150px;
+        height: 250px;
+        border-radius: 40px;
+    }
+    
+    #bookCover4 {
+        position: absolute;
+        left: -15rem;
+        top: -10rem;
+    }
+    /*--------------------------------------------------------*/
+    
+    .rowImagecontainer5 {
+        height: 10rem;
+        background-color: blue;
+        width: 50rem;
+        border-radius: 40px;
+        position: absolute;
+        left: 310rem;
+        bottom: 10rem;
+    }
+    
+    .columnSlidefade5 {
+        position: absolute;
+        width: 20rem;
+        height: 10rem;
+        top: 3rem;
+        left: 18rem;
+        border-radius: 10px;
+        color: white;
+    }
+    
+    .columnSlidefade5 p {}
+    
+    #bookCover5 img {
+        width: 150px;
+        height: 250px;
+        border-radius: 40px;
+    }
+    
+    #bookCover5 {
+        position: absolute;
+        left: -15rem;
+        top: -10rem;
+    }
