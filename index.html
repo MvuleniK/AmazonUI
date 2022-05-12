@@ -8,8 +8,10 @@
     <meta name=" " content=" ">
     <meta name="keywords" content=" ">
     <title>Home Page</title>
-    <!-- displays site properly based on user's device -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -26,14 +28,14 @@
         <div class="searchNav">
 
 
-            <table class="searchNavtable">
+            <table class="searchNavtable" cellpadding="0" cellspacing="0">
                 <tr>
                     <!----------------Logo------------------->
-                    <td style="padding-right: 600px;">
-                        <img id="navIcon" src="./assest/img/kindle.png">
+                    <td>
+                        <img style="margin-left: -700px;" id="navIcon" src="./assest/img/kindle.png">
                     </td>
                     <!-----------------Searchbar------------------>
-                    <td style="padding-left:600px">
+                    <td>
                         <div class=" container " style="grid-row:auto">
                             <form action="/ " method="GET " class="form ">
                                 <input type="search " placeholder=" Search your books " class="search-field " />
@@ -44,26 +46,20 @@
                         </div>
                     </td>
                     <!----------------------------------->
-                    <td style="padding-left:50px">
+                    <td style="padding-right:60px">
                         <h3>New Release <sup class="fstop">.</sup></h3>
                     </td>
                     <!----------------------------------->
-                    <td style="padding-left:50px">
+                    <td style="padding-left:20px;">
                         <h3 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Featured</h3>
                     </td>
 
-                    <td style="padding-left:50px">
+                    <td style="padding-left:60px">
                         <img src="./assest/img/grid-fill.svg ">
                     </td>
                 </tr>
             </table>
-
-
-
-
-
-
-
+            <!------------------------------------------------------ Search----------------------------------------------------------->
 
 
     </header>
@@ -87,7 +83,7 @@
                     <tr span="1">
                         <!----- KINDLE ICON----->
                         <td colspan="2">
-                            <p> <img src="./assest/img/kindle-icon.png"> My Kindle Board </p>
+                            <p> <img id="kindleIcon" src="./assest/img/kindle-icon.png"> My Kindle Board </p>
                         </td>
                     </tr>
                     <tr>
@@ -118,7 +114,16 @@
                         </td>
                     </tr>
                 </table>
-                <img id="productAmazon" src="./assest/img/amazon_PNG13-750x375.png">
+
+                <table>
+                    <tr>
+                        <td>
+                            <img id="productAmazon" src="./assest/img/Untitled.png">
+                        </td>
+                    </tr>
+
+                </table>
+
             </div>
 
         </div>
@@ -128,18 +133,20 @@
 
         <!----------------Recent books------------------->
         <!----------------This portion will use the Jquery API for animation------------------->
+        <h2 id="scrollRecentitle"> Books you read last</h2>
         <div class="scrollRecentbooks">
-
 
             <!----------------This portion will use the Jquery API for animation------------------->
             <div class="rowImagecontainer">
+
+
+
                 <div class="columnSlidefade">
                     <font size="-1">
-                        <h3>Strategic Storytelling: How To Create<br> Persuasive Business Presentations</h3>
-                        <br>
-                        <P>
+                        <h3>Strategic Storytelling</h3>
+                        <p>
                             160 Page Chapter 3 Last Read
-                        </P>
+                        </p>
                     </font>
                     <div id="bookCover">
                         <img src="./assest/books/book1.jpg">
@@ -152,11 +159,10 @@
             <div class="rowImagecontainer1">
                 <div class="columnSlidefade1">
                     <font size="-1">
-                        <h3> Forecasting: Principles and Practice <br> and Blockchain</h3>
-                        <br>
-                        <P>
-                            200 Page Chapter 8 Last Read
-                        </P>
+                        <h3> The Intelligent Investor</h3>
+                        <p>
+                            150 Page Chapter 2 Last Read
+                        </p>
                     </font>
                     <div id="bookCover1">
                         <img src="./assest/books/book3.jpg">
@@ -169,11 +175,10 @@
             <div class="rowImagecontainer2">
                 <div class="columnSlidefade2">
                     <font size="-1">
-                        <h3>Valuation: Measuring and Managing <br> the Value of Companies, Fourth Edition</h3>
-                        <br>
-                        <P>
+                        <h3>Valuation</h3>
+                        <p>
                             768 Page Chapter 4 Last Read
-                        </P>
+                        </p>
                     </font>
                     <div id="bookCover2">
                         <img src="./assest/books/book4.jpg">
@@ -187,8 +192,7 @@
             <div class="rowImagecontainer3">
                 <div class="columnSlidefade3">
                     <font size="-1">
-                        <h3>Start-Up Nation: <br> The Story of Israel’s Economic Miracle</h3>
-                        <br>
+                        <h3>Start-Up Nation</h3>
                         <p>
                             80 Page Chapter 2 Last Read
                         </p>
@@ -204,8 +208,7 @@
             <div class="rowImagecontainer4">
                 <div class="columnSlidefade4">
                     <font size="-1">
-                        <h3>Snapshots from Hell: <br> The Making of an MBA</h3>
-                        <br>
+                        <h3>Snapshots from Hell</h3>
                         <p>
                             120 Page Chapter 6 Last Read
                         </p>
@@ -221,9 +224,7 @@
             <div class="rowImagecontainer5">
                 <div class="columnSlidefade5">
                     <font size="-1">
-                        <h3> Forecasting: Principles and Practic</h3>
-                        <br>
-                        <br>
+                        <h3> Forecasting: Principles and Practice</h3>
                         <p>
                             200 Page Chapter 3 Last Read
                         </p>
@@ -246,13 +247,13 @@
         </div>
         <!----------------Recent books------------------->
 
+
         <!------------------ New Releases------------------------->
         <div class="NewReleases">
-
-            <h2 id="titleNewReleases"> New Release</h2>
+            <h2 id="NewReleasestitle">New Releases</h2>
             <!------------------ content------------------------->
 
-            <div Class="rowReleses" align="left">
+            <div class="rowReleses">
 
                 <div class="columnReleases">
 
@@ -273,7 +274,7 @@
 
                     <img src="./assest/img/book2.jpg">
 
-                    <h3>Basic Economics: A Common Sense </h3>
+                    <h3>Basic Economics</h3>
                     <p>
                         Thomas Sowell
                     </p>
@@ -287,11 +288,11 @@
 
                 <div class="columnReleases">
 
-                    <img src="./assest/img/book3.jpg">
+                    <img src="./assest/img/book6.jpg">
 
-                    <h3>Fundementals of Computational</h3>
+                    <h3>Deep Learning</h3>
                     <p>
-                        James M. Keller & Derong Liu
+                        I. Goodfellow & Y. Bengio & A. Courville
                     </p>
                     <button>
                     <p>
@@ -337,12 +338,12 @@
         <div class="rightsidebar">
             <h2>Famous Authors</h2>
 
-            <table cellpadding="10" cellspacing="30">
+            <table id="rightsidebarTable" cellpadding="2" cellspacing="2">
                 <tr colspan="2">
                     <td>
                         <img src="./assest/authors/rowlings.webp">
                     </td>
-                    <td style="paddting-left:30px;">
+                    <td style="padding-left:30px;">
                         <h3>J.K. Rowling</h3>
                         <p>10 Books</p>
                     </td>
@@ -368,6 +369,7 @@
             </table>
         </div>
         <!------------------ New Authors------------------------->
+        </div>
 
 
 
