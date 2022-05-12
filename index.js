@@ -22,7 +22,7 @@ function registration() {
     if (firstname == '') {
         alert('Please enter your name')
     } else if (!letters.test(firstname)) {
-        alert('Name field required only alphabet characters')
+        alert('Name field requiregitd only alphabet characters')
     } else if (email == '') {
         alert("Please enter your email")
 
@@ -46,8 +46,8 @@ function registration() {
         //var email = document.getElementById("regMail").value;
         //var pwd = document.getElementById("regPassword").value;
         //var cpwd = document.getElementById("regPasswordconfirm").value;
-        localStorage.setItem('regMail', email.value);
-        localStorage.setItem('regPasswordconfirm', cpwd.value);
+        localStorage.setItem('regMail', email);
+        localStorage.setItem('regPasswordconfirm', cpwd);
         ////////redirect user to login form                                          
         alert('Your account has been created , Redirecting you to Login Website');
         // Redirecting to other page or webste code. 
@@ -70,12 +70,13 @@ function login() {
     var storedName = localStorage.getItem('regMail');
     var storedPw = localStorage.getItem('regPasswordconfirm');
 
-    var userName = document.getElementById('userName');
-    var userPw = document.getElementById('userPw');
+    var userName = document.getElementById('logEmail');
+    var userPw = document.getElementById('logPassword');
     //var userRemember = document.getElementById("rememberMe");
 
     if (userName.value == storedName && userPw.value == storedPw) {
-        alert('You are logged in.');
+        alert('You are logged in, Redirecting you to Login Website');
+        window.location.href = "./index.html";
     } else {
         alert('Error on login');
     }
@@ -96,49 +97,49 @@ function login() {
 /////////////////////Login Elements code1 ////////////////////////////////////////////////////////
 
 
-class loginObject {
-    constructor(username, password) {
-        this.username = username;
-        this.password = password;
-    }
+//class loginObject {
+//   constructor(username, password) {
+//       this.username = username;
+//       this.password = password;
+//   }
 
-}
+//}
 
-function login() {
-
-
-
-    //define the variables for the 
-    var username = document.getElementById('logEmail').value;
-    var password = document.getElementById('logPassword').value;
-
-    //else if (!filter.test(email)) {
-    //    alert('Invalid email');
-
-    if (username == "Formget" && password == "formget#123") {
-        alert("Login successfully");
-        window.location.href = "./index.html"; // Redirecting to mainpage
-        return false;
-    } else { ///// Fix this portion!
-        ////////redirect user to login form                                          
-        alert('Thank You for Registration & You are Redirecting to Website');
-        // Redirecting to other page or webste code. 
-        window.location.href = "./index.html";
-    }
+//function login() {
 
 
-    var loginProfile = new loginObject(username, password);
 
-    var jsonString = JSON.stringify(loginProfile);
-    setLogin(jsonString);
+//define the variables for the 
+//  var username = document.getElementById('logEmail').value;
+// var password = document.getElementById('logPassword').value;
 
-}
+//else if (!filter.test(email)) {
+//    alert('Invalid email');
 
-function setLogin(jsonString) {
-    localStorage.setItem("details", jsonString);
-}
+// if (username == "Formget" && password == "formget#123") {
+//   alert("Login successfully");
+// window.location.href = "./index.html"; // Redirecting to mainpage
+//  return false;
+//  } else { ///// Fix this portion!
+////////redirect user to login form                                          
+//    alert('Thank You for Registration & You are Redirecting to Website');
+//     // Redirecting to other page or webste code. 
+//   window.location.href = "./index.html";
+//   }
 
-function getLogin() {
-    var jsonObj = localStorage.details;
-    var loginProfileObj = JSON.parse(jsonObj);
-}
+
+//  var loginProfile = new loginObject(username, password);
+
+//  var jsonString = JSON.stringify(loginProfile);
+//   setLogin(jsonString);
+
+//}
+
+//function setLogin(jsonString) {
+//    localStorage.setItem("details", jsonString);
+//}
+
+//function getLogin() {
+//    var jsonObj = localStorage.details;
+//    var loginProfileObj = JSON.parse(jsonObj);
+//}

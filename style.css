@@ -33,6 +33,11 @@
     clear: both;
 }
 
+.fstop {
+    color: orange;
+    font-size: large;
+}
+
 
 /* Reset browser's padding and margin */
 
