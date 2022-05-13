@@ -302,18 +302,17 @@
     
     #NewReleasestitle {
         position: absolute;
-        left: 18rem;
+        left: 6rem;
         top: -3rem;
     }
     
     .NewReleases {
         padding-left: 100px;
         margin-right: 50px;
-        position: relative;
+        position: absolute;
         width: 100%;
-        margin-top: 1px;
-        top: 3rem;
-        left: -3.5rem;
+        top: 37rem;
+        left: 10rem;
     }
     
     .columnReleases {
@@ -373,7 +372,7 @@
         padding-bottom: 50px;
         position: relative;
         margin-right: 100px;
-        bottom: 12rem;
+        bottom: 3rem;
     }
     
     .leftsidebar p {
@@ -434,7 +433,7 @@
     #productAmazon {
         width: 120px;
         height: auto;
-        margin-top: 100px;
+        margin-top: 120px;
         margin-left: 5px;
     }
     
@@ -448,9 +447,9 @@
         height: 380px;
         width: 250px;
         float: right;
-        position: relative;
-        bottom: 26rem;
-        left: 10px;
+        position: absolute;
+        bottom: 1rem;
+        right: -28px;
         border-bottom-left-radius: 20px;
         border-top-left-radius: 20px;
     }
@@ -494,24 +493,35 @@
     }
     
     #rightsidebarTable {
-        padding-left: 33px;
+        padding-left: 20px;
     }
     /*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
     /*----------------------- main properties =---------------------------------*/
     
     #scrollRecentitle {
         position: relative;
-        top: -3rem;
+        top: -2rem;
         left: -2rem;
     }
     /*************************************************************************************/
     /***********************************Image Slider**************************************************/
     /*******************************/
     
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        height: 25rem;
+        position: absolute;
+        left: 10rem;
+        bottom: 15rem;
+        margin-bottom: 10rem;
+        width: 80rem;
+    }
+    
     .horizontal-scroll {
-        width: 1425px;
-        top: -5rem;
-        left: 18.5rem;
+        width: 100rem;
         height: 300px;
         background-color: transparent;
         border: 1px solid #ddd;
@@ -520,13 +530,12 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        overflow: hidden;
         position: relative;
-        top: -45rem;
+        overflow: hidden;
     }
     
     .horizontal-scroll .btn-scroll {
-        background-color: #1167b1;
+        background-color: #fff;
         color: #999;
         box-shadow: 0 0 10px #999;
         padding: 5px 8px;
@@ -543,183 +552,406 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        position: relative;
-        left: 1rem;
+        position: absolute;
+        left: 0;
         transition: 0.5s all ease-out;
-        content: "";
-        clear: both;
-        display: table;
     }
     
     .story-circle {
         width: 60px;
         height: 60px;
         margin: 15px 10px;
-        left: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 40px;
-        margin-right: 10rem;
-        background-color: rgba(250, 112, 0, 0.877);
+        margin-right: 20rem;
     }
-    /****************************************************************/
-    
-    .columnSlider {
-        float: left;
-        width: 10%;
-        padding: 5px;
-    }
-    
-    .rowSlider::after {
-        content: "";
-        clear: both;
-        display: table;
-    }
-    /********************Book1*************************************/
     
     .story-circle img {
-        width: 104px;
-        height: 151px;
-        border-radius: 10px;
+        width: 53px;
+        height: 10rem;
+        border-radius: 40px;
     }
     
     .colorb1 {
         position: absolute;
         background-image: linear-gradient(to bottom right, white, #2b2525);
-        height: 8rem;
-        width: 20rem;
+        height: 6rem;
+        width: 15rem;
         border-radius: 40px;
-        left: -75rem;
+        left: 3rem;
     }
     
     .wordsb1 {
         position: absolute;
         width: 10rem;
-        right: 1rem;
+        left: 5rem;
     }
     
     .bookimg1 {
         position: absolute;
-        left: -7rem;
+        left: -4rem;
         top: -4.5rem;
-        border-radius: 20px;
     }
-    /**************************************************************************************************/
-    /********************Book2*************************************/
-    
-    .story-circle2 img {
-        width: 104px;
-        height: 151px;
-        border-radius: 10px;
-    }
+    /*******************************/
+    /*book2*/
     
     .colorb2 {
         position: absolute;
-        background-image: linear-gradient(to bottom right, white, #2b2525);
-        height: 8rem;
-        width: 20rem;
+        background-image: linear-gradient(to bottom right, #B6CEB6, #0C71B5);
+        height: 6rem;
+        width: 15rem;
         border-radius: 40px;
-        left: -50rem;
+        left: 25rem;
+    }
+    
+    .story-circle1 {
+        width: 60px;
+        height: 60px;
+        margin: 15px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+        margin-right: 20rem;
+    }
+    
+    .story-circle1 img {
+        width: 53px;
+        height: 10rem;
+        border-radius: 40px;
     }
     
     .wordsb2 {
         position: absolute;
         width: 10rem;
-        right: 1rem;
+        left: 5rem;
     }
     
     .bookimg2 {
         position: absolute;
-        left: -7rem;
+        left: -4rem;
         top: -4.5rem;
-        border-radius: 20px;
     }
-    /********************Book3*************************************/
-    
-    .story-circle3 img {
-        width: 104px;
-        height: 151px;
-        border-radius: 10px;
-    }
+    /*end*/
+    /*book3*/
     
     .colorb3 {
         position: absolute;
-        background-image: linear-gradient(to bottom right, white, #2b2525);
-        height: 8rem;
-        width: 20rem;
+        background-image: linear-gradient(to bottom right, #A31C20, #10080E);
+        height: 6rem;
+        width: 15rem;
         border-radius: 40px;
-        left: -25rem;
+        left: 47rem;
+    }
+    
+    .story-circle2 {
+        width: 60px;
+        height: 60px;
+        margin: 15px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+        margin-right: 20rem;
+    }
+    
+    .story-circle2 img {
+        width: 53px;
+        height: 10rem;
+        border-radius: 40px;
     }
     
     .wordsb3 {
         position: absolute;
         width: 10rem;
-        right: 1rem;
+        left: 5rem;
     }
     
     .bookimg3 {
         position: absolute;
-        left: -7rem;
+        left: -4rem;
         top: -4.5rem;
-        border-radius: 20px;
     }
-    /********************Book4*************************************/
-    
-    .story-circle4 img {
-        width: 104px;
-        height: 151px;
-        border-radius: 10px;
-    }
+    /*end*/
+    /*book4*/
     
     .colorb4 {
         position: absolute;
-        background-image: linear-gradient(to bottom right, white, #2b2525);
-        height: 8rem;
-        width: 20rem;
+        background-image: linear-gradient(to bottom right, #206A35, #D7CA68);
+        height: 6rem;
+        width: 15rem;
         border-radius: 40px;
-        left: -0rem;
+        left: 69rem;
+    }
+    
+    .story-circle3 {
+        width: 60px;
+        height: 60px;
+        margin: 15px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+        margin-right: 20rem;
+    }
+    
+    .story-circle3 img {
+        width: 53px;
+        height: 10rem;
+        border-radius: 40px;
     }
     
     .wordsb4 {
         position: absolute;
         width: 10rem;
-        right: 1rem;
+        left: 5rem;
     }
     
     .bookimg4 {
         position: absolute;
-        left: -7rem;
+        left: -4rem;
         top: -4.5rem;
-        border-radius: 20px;
     }
-    /********************Book5*************************************/
-    
-    .story-circle5 img {
-        width: 104px;
-        height: 151px;
-        border-radius: 10px;
-    }
+    /*end*/
+    /*book5*/
     
     .colorb5 {
         position: absolute;
-        background-image: linear-gradient(to bottom right, white, #2b2525);
-        height: 8rem;
-        width: 20rem;
+        background-image: linear-gradient(to bottom right, #2B132E, #6E9FC8);
+        height: 6rem;
+        width: 15rem;
         border-radius: 40px;
-        left: 25rem;
+        left: 91rem;
+    }
+    
+    .story-circle4 {
+        width: 60px;
+        height: 60px;
+        margin: 15px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+        margin-right: 20rem;
+    }
+    
+    .story-circle4 img {
+        width: 53px;
+        height: 10rem;
+        border-radius: 40px;
     }
     
     .wordsb5 {
         position: absolute;
         width: 10rem;
-        right: 1rem;
+        left: 5rem;
     }
     
     .bookimg5 {
         position: absolute;
-        left: -7rem;
+        left: -4rem;
         top: -4.5rem;
-        border-radius: 20px;
     }
-    /********************Book6*************************************/
+    /*end*/
+    /*book6*/
+    
+    .colorb6 {
+        position: absolute;
+        background-image: linear-gradient(to bottom right, #540F4D, #868686);
+        height: 6rem;
+        width: 15rem;
+        border-radius: 40px;
+        left: 113rem;
+    }
+    
+    .story-circle5 {
+        width: 60px;
+        height: 60px;
+        margin: 15px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+        margin-right: 20rem;
+    }
+    
+    .story-circle5 img {
+        width: 53px;
+        height: 10rem;
+        border-radius: 40px;
+    }
+    
+    .wordsb6 {
+        position: absolute;
+        width: 10rem;
+        left: 5rem;
+    }
+    
+    .bookimg6 {
+        position: absolute;
+        left: -4rem;
+        top: -4.5rem;
+    }
+    /*end*/
+    /*book7*/
+    
+    .colorb7 {
+        position: absolute;
+        background-image: linear-gradient(to bottom right, #FFFFFF, #C0483F);
+        height: 6rem;
+        width: 15rem;
+        border-radius: 40px;
+        left: 135rem;
+    }
+    
+    .story-circle6 {
+        width: 60px;
+        height: 60px;
+        margin: 15px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+        margin-right: 20rem;
+    }
+    
+    .story-circle6 img {
+        width: 53px;
+        height: 10rem;
+        border-radius: 40px;
+    }
+    
+    .wordsb7 {
+        position: absolute;
+        width: 10rem;
+        left: 5rem;
+    }
+    
+    .bookimg7 {
+        position: absolute;
+        left: -4rem;
+        top: -4.5rem;
+    }
+    /*end*/
+    /*book8*/
+    
+    .colorb8 {
+        position: absolute;
+        background-image: linear-gradient(to bottom right, #DDF0F7, #7CA1C6);
+        height: 6rem;
+        width: 15rem;
+        border-radius: 40px;
+        left: 157rem;
+    }
+    
+    .story-circle7 {
+        width: 60px;
+        height: 60px;
+        margin: 15px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+        margin-right: 20rem;
+    }
+    
+    .story-circle7 img {
+        width: 53px;
+        height: 10rem;
+        border-radius: 40px;
+    }
+    
+    .wordsb8 {
+        position: absolute;
+        width: 10rem;
+        left: 5rem;
+    }
+    
+    .bookimg8 {
+        position: absolute;
+        left: -4rem;
+        top: -4.5rem;
+    }
+    /*end*/
+    /*book9*/
+    
+    .colorb9 {
+        position: absolute;
+        background-image: linear-gradient(to bottom right, #6681B0, #C7DAFA);
+        height: 6rem;
+        width: 15rem;
+        border-radius: 40px;
+        left: 179rem;
+    }
+    
+    .story-circle8 {
+        width: 60px;
+        height: 60px;
+        margin: 15px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+        margin-right: 20rem;
+    }
+    
+    .story-circle8 img {
+        width: 53px;
+        height: 10rem;
+        border-radius: 40px;
+    }
+    
+    .wordsb9 {
+        position: absolute;
+        width: 10rem;
+        left: 5rem;
+    }
+    
+    .bookimg9 {
+        position: absolute;
+        left: -4rem;
+        top: -4.5rem;
+    }
+    /*end*/
+    /*book10*/
+    
+    .colorb10 {
+        position: absolute;
+        background-image: linear-gradient(to bottom right, #2A78B9, #FFFFFF);
+        height: 6rem;
+        width: 15rem;
+        border-radius: 40px;
+        left: 201rem;
+    }
+    
+    .story-circle9 {
+        width: 60px;
+        height: 60px;
+        margin: 15px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+        margin-right: 20rem;
+    }
+    
+    .story-circle9 img {
+        width: 53px;
+        height: 10rem;
+        border-radius: 40px;
+    }
+    
+    .wordsb10 {
+        position: absolute;
+        width: 10rem;
+        left: 5rem;
+    }
+    
+    .bookimg10 {
+        position: absolute;
+        left: -4rem;
+        top: -4.5rem;
+    }
+    /*end*/
