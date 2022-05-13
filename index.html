@@ -9,8 +9,17 @@
     <meta name="keywords" content=" ">
     <title>Home Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- displays site properly based on user's device -->
+
+    <!------------------- Foreign Elements---------------------------->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <!---------------------------------------------------------------->
 
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -134,244 +143,276 @@
         <!----------------Recent books------------------->
         <!----------------This portion will use the Jquery API for animation------------------->
         <h2 id="scrollRecentitle"> Books you read last</h2>
-        <div class="scrollRecentbooks">
 
-            <!----------------This portion will use the Jquery API for animation------------------->
-            <div class="rowImagecontainer">
-
-
-
-                <div class="columnSlidefade">
-                    <font size="-1">
-                        <h3>Strategic Storytelling</h3>
-                        <p>
-                            160 Page Chapter 3 Last Read
-                        </p>
-                    </font>
-                    <div id="bookCover">
-                        <img src="./assest/books/book1.jpg">
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="rowImagecontainer1">
-                <div class="columnSlidefade1">
-                    <font size="-1">
-                        <h3> The Intelligent Investor</h3>
-                        <p>
-                            150 Page Chapter 2 Last Read
-                        </p>
-                    </font>
-                    <div id="bookCover1">
-                        <img src="./assest/books/book3.jpg">
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="rowImagecontainer2">
-                <div class="columnSlidefade2">
-                    <font size="-1">
-                        <h3>Valuation</h3>
-                        <p>
-                            768 Page Chapter 4 Last Read
-                        </p>
-                    </font>
-                    <div id="bookCover2">
-                        <img src="./assest/books/book4.jpg">
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="rowImagecontainer3">
-                <div class="columnSlidefade3">
-                    <font size="-1">
-                        <h3>Start-Up Nation</h3>
-                        <p>
-                            80 Page Chapter 2 Last Read
-                        </p>
-                    </font>
-                    <div id="bookCover2">
-                        <img src="./assest/books/book10.jpg">
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="rowImagecontainer4">
-                <div class="columnSlidefade4">
-                    <font size="-1">
-                        <h3>Snapshots from Hell</h3>
-                        <p>
-                            120 Page Chapter 6 Last Read
-                        </p>
-                    </font>
-                    <div id="bookCover4">
-                        <img src="./assest/books/book8.jpg">
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="rowImagecontainer5">
-                <div class="columnSlidefade5">
-                    <font size="-1">
-                        <h3> Forecasting: Principles and Practice</h3>
-                        <p>
-                            200 Page Chapter 3 Last Read
-                        </p>
-                    </font>
-                    <div id="bookCover5">
-                        <img src="./assest/books/book5.jpg">
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-
-
-
-
-
-        </div>
         <!----------------Recent books------------------->
 
+        <div class="ImageSlider">
 
-        <!------------------ New Releases------------------------->
-        <div class="NewReleases">
-            <h2 id="NewReleasestitle">New Releases</h2>
-            <!------------------ content------------------------->
+            <div class="container">
+                <div class="horizontal-scroll">
+                    <button class="btn-scroll" id="btn-scroll-left" onclick="scrollHorizontally(1)"><i class="fas fa-chevron-left"></i></button>
+                    <button class="btn-scroll" id="btn-scroll-right" onclick="scrollHorizontally(-1)"><i class="fas fa-chevron-right"></i></button>
 
-            <div class="rowReleses">
+                    <!----------------Align of book------------------->
+                    <div class="rowSlider">
+                        <div class="columnSlider">
+                            <div class="storys-container">
+                                <div class="story-circle">
+                                    <div class="colorb1">
+                                        <div class="wordsb1">
+                                            <font size="-1">
+                                                <h4>
+                                                    Strategic Storytelling
+                                                </h4>
+                                                <p>160 Page Chapter 3 Last Read</p>
+                                            </font>
 
-                <div class="columnReleases">
+                                            <div class="bookimg1"><img src="./assest/books/book1.jpg"></div>
+                                        </div>
 
-                    <img src="./assest/img/book1.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columnSlider">
+                            <div class="storys-container">
+                                <div class="story-circle2">
+                                    <div class="colorb2">
+                                        <div class="wordsb2">
+                                            <font size="-1">
+                                                <h4>
+                                                    Strategic Storytelling
+                                                </h4>
+                                                <p>160 Page Chapter 3 Last Read</p>
+                                            </font>
 
-                    <h3>Barbarians The Gate</h3>
-                    <p>
-                        Bryan Burrough & John Helyar
-                    </p>
-                    <button>
-                    <p>
-                        Business
-                    </p>
-                    </button>
-                </div>
+                                            <div class="bookimg2"><img src="./assest/books/book1.jpg"></div>
+                                        </div>
 
-                <div class="columnReleases">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                    <img src="./assest/img/book2.jpg">
 
-                    <h3>Basic Economics</h3>
-                    <p>
-                        Thomas Sowell
-                    </p>
-                    <button>
-                    <p>
-                        Business
-                    </p>
-                </button>
+                        <div class="columnSlider">
+                            <div class="storys-container">
+                                <div class="story-circle3">
+                                    <div class="colorb3">
+                                        <div class="wordsb3">
+                                            <font size="-1">
+                                                <h4>
+                                                    Strategic Storytelling
+                                                </h4>
+                                                <p>160 Page Chapter 3 Last Read</p>
+                                            </font>
 
-                </div>
+                                            <div class="bookimg3"><img src="./assest/books/book1.jpg"></div>
+                                        </div>
 
-                <div class="columnReleases">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                    <img src="./assest/img/book6.jpg">
+                        <div class="columnSlider">
+                            <div class="storys-container">
+                                <div class="story-circle4">
+                                    <div class="colorb4">
+                                        <div class="wordsb4">
+                                            <font size="-1">
+                                                <h4>
+                                                    Strategic Storytelling
+                                                </h4>
+                                                <p>160 Page Chapter 3 Last Read</p>
+                                            </font>
 
-                    <h3>Deep Learning</h3>
-                    <p>
-                        I. Goodfellow & Y. Bengio & A. Courville
-                    </p>
-                    <button>
-                    <p>
-                        Engineering
-                    </p>
-                </button>
-                </div>
+                                            <div class="bookimg4"><img src="./assest/books/book1.jpg"></div>
+                                        </div>
 
-                <div class="columnReleases">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                    <img src="./assest/img/book4.jpg">
+                        <div class="columnSlider">
+                            <div class="storys-container">
+                                <div class="story-circle5">
+                                    <div class="colorb5">
+                                        <div class="wordsb5">
+                                            <font size="-1">
+                                                <h4>
+                                                    Strategic Storytelling
+                                                </h4>
+                                                <p>160 Page Chapter 3 Last Read</p>
+                                            </font>
 
-                    <h3>Numerical Methods for Engieering</h3>
-                    <p>
-                        Karl F. Warnick
-                    </p>
-                    <button>
-                    <p>
-                        Engineering
-                    </p>
-                </button>
-                </div>
+                                            <div class="bookimg5"><img src="./assest/books/book1.jpg"></div>
+                                        </div>
 
-                <div class="columnReleases">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    <img src="./assest/img/book5.jpg">
-
-                    <h3>The Mind Of The Strategist</h3>
-                    <p>
-                        Kenichi Ohmae
-                    </p>
-                    <button>
-                    <p>
-                        Business
-                    </p>
-                    </button>
                 </div>
 
             </div>
+
+            <!------------------ New Releases------------------------->
+            <div class="NewReleases">
+                <h2 id="NewReleasestitle">New Releases</h2>
+                <!------------------ content------------------------->
+
+                <div class="rowReleses">
+
+                    <div class="columnReleases">
+
+                        <img src="./assest/img/book1.jpg">
+
+                        <h3>Barbarians At The Gate</h3>
+                        <p>
+                            Bryan Burrough & John Helyar
+                        </p>
+                        <button>
+                    <p>
+                        Business
+                    </p>
+                    </button>
+                    </div>
+
+                    <div class="columnReleases">
+
+                        <img src="./assest/img/book2.jpg">
+
+                        <h3>Basic Economics</h3>
+                        <p>
+                            Thomas Sowell
+                        </p>
+                        <button>
+                    <p>
+                        Business
+                    </p>
+                </button>
+
+                    </div>
+
+                    <div class="columnReleases">
+
+                        <img src="./assest/img/book6.jpg">
+
+                        <h3>Deep Learning</h3>
+                        <p>
+                            I. Goodfellow & Y. Bengio & A. Courville
+                        </p>
+                        <button>
+                    <p>
+                        Engineering
+                    </p>
+                </button>
+                    </div>
+
+                    <div class="columnReleases">
+
+                        <img src="./assest/img/book4.jpg">
+
+                        <h3>Numerical Methods for Engieering</h3>
+                        <p>
+                            Karl F. Warnick
+                        </p>
+                        <button>
+                    <p>
+                        Engineering
+                    </p>
+                </button>
+                    </div>
+
+                    <div class="columnReleases">
+
+                        <img src="./assest/img/book5.jpg">
+
+                        <h3>The Mind Of The Strategist</h3>
+                        <p>
+                            Kenichi Ohmae
+                        </p>
+                        <button>
+                    <p>
+                        Business
+                    </p>
+                    </button>
+                    </div>
+
+                </div>
+            </div>
+            <!---------------rightsidebars------------------->
+
+            <div class="rightsidebar">
+                <h2>Famous Authors</h2>
+
+                <table id="rightsidebarTable" cellpadding="2" cellspacing="2">
+                    <tr colspan="2">
+                        <td>
+                            <img src="./assest/authors/rowlings.webp">
+                        </td>
+                        <td style="padding-left:30px;">
+                            <h3>J.K. Rowling</h3>
+                            <p>10 Books</p>
+                        </td>
+                    </tr>
+                    <tr colspan="2">
+                        <td>
+                            <img src="./assest/authors/king.jpg">
+                        </td>
+                        <td style="padding-left:30px;">
+                            <h3>Stephan King</h3>
+                            <p>61 Novels</p>
+                        </td>
+                    </tr>
+                    <tr colspan="2">
+                        <td>
+                            <img src="./assest/authors/steel.jpeg">
+                        </td>
+                        <td style="padding-left:30px;">
+                            <h3>Danielle Steel</h3>
+                            <p>179 Books</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!------------------ New Authors------------------------->
         </div>
-        <!---------------rightsidebars------------------->
 
-        <div class="rightsidebar">
-            <h2>Famous Authors</h2>
+        <script>
+            let currentScrollPosition = 0;
+            let scrollAmount = 400;
+            const sCont = document.querySelector(".storys-container");
+            const hScroll = document.querySelector(".horizontal-scroll");
+            const btnScrollLeft = document.querySelector("#btn-scroll-left");
+            const btnScrollRight = document.querySelector("#btn-scroll-right");
+            btnScrollLeft.style.opacity = "0";
 
-            <table id="rightsidebarTable" cellpadding="2" cellspacing="2">
-                <tr colspan="2">
-                    <td>
-                        <img src="./assest/authors/rowlings.webp">
-                    </td>
-                    <td style="padding-left:30px;">
-                        <h3>J.K. Rowling</h3>
-                        <p>10 Books</p>
-                    </td>
-                </tr>
-                <tr colspan="2">
-                    <td>
-                        <img src="./assest/authors/king.jpg">
-                    </td>
-                    <td style="padding-left:30px;">
-                        <h3>Stephan King</h3>
-                        <p>61 Novels</p>
-                    </td>
-                </tr>
-                <tr colspan="2">
-                    <td>
-                        <img src="./assest/authors/steel.jpeg">
-                    </td>
-                    <td style="padding-left:30px;">
-                        <h3>Danielle Steel</h3>
-                        <p>179 Books</p>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <!------------------ New Authors------------------------->
-        </div>
+            let maxScroll = -sCont.offsetWidth + hScroll.offsetWidth;
 
+            function scrollHorizontally(val) {
+                currentScrollPosition += (val * scrollAmount);
+                sCont.style.left = currentScrollPosition + "px";
+                if (currentScrollPosition >= 0) {
+                    currentScrollPosition = 0
+                    btnScrollLeft.style.opacity = "0";
+                } else {
+                    btnScrollLeft.style.opacity = "1";
+                }
+                if (currentScrollPosition <= maxScroll) {
+                    currentScrollPosition = maxScroll;
+                    btnScrollRight.style.opacity = "0";
 
+                } else {
+                    btnScrollRight.style.opacity = "1";
+                }
+                sCont.style.left = currentScrollPosition + "px";
+            }
+        </script>
 
 
     </body>
