@@ -29,7 +29,7 @@
     li {
         font-weight: bold;
     }
-    #wrapper {
+    #Mainwrapper {
         /* min-width: 1200px;
             max-width: 1366px; */
         max-width: 75em;
@@ -39,7 +39,7 @@
         display: flex;
         /* border: thin solid black; */
     }
-    #Body-Section {
+    #bodySection {
         /* border: thin solid black; */
         /* border-radius: 50px; */
         background-color: #f8f5f3;
@@ -467,7 +467,7 @@
     li {
         font-weight: bold;
     }
-    #wrapper {
+    #Mainwrapper {
         /* min-width: 1200px;
             max-width: 1366px; */
         max-width: 30em;
@@ -477,7 +477,7 @@
         display: flex;
         /* border: thin solid black; */
     }
-    #Body-Section {
+    #bodySection {
         /* border: thin solid black; */
         background-color: #f8f5f3;
         /* height: 43.75em; */
