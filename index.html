@@ -1,474 +1,86 @@
 <!DOCTYPE html>
-<html>
 
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="index page" content=" ">
-    <meta name=" " content=" ">
-    <meta name="keywords" content=" ">
-    <title>Home Page</title>
+    <meta name="keywords" content="user registration ">
+    <title>Index Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style0.css">
 
-    <!------------------- Foreign Elements---------------------------->
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-
-    <!---------------------------------------------------------------->
-
-    <link rel="stylesheet" href="./style.css">
 </head>
 
-<title> Amazon landing page</title>
 
 
-
-<body style="background-color: #f5f5f5;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-
-
-    <header class="upperHeader">
-
-        <!------------- Search--------------------->
-        <div class="searchNav">
+<body style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" onload="addImageEvent()">
 
 
-            <table class="searchNavtable" cellpadding="0" cellspacing="0">
-                <tr>
-                    <!----------------Logo------------------->
-                    <td>
-                        <img style="margin-left: -700px;" id="navIcon" src="./assest/img/kindle.png">
-                    </td>
-                    <!-----------------Searchbar------------------>
-                    <td>
-                        <div class=" container " style="grid-row:auto">
-                            <form action="/ " method="GET " class="form ">
-                                <input type="search " placeholder=" Search your books " class="search-field " />
-                                <button type="submit " class="search-button ">
-                                <img src="./assest/img/magnified.png ">
-                              </button>
-                            </form>
-                        </div>
-                    </td>
-                    <!----------------------------------->
-                    <td style="padding-right:60px">
-                        <h3>New Release <sup class="fstop">.</sup></h3>
-                    </td>
-                    <!----------------------------------->
-                    <td style="padding-left:20px;">
-                        <h3 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Featured</h3>
-                    </td>
+    <div class="register">
 
-                    <td style="padding-left:60px">
-                        <img src="./assest/img/grid-fill.svg ">
-                    </td>
-                </tr>
-            </table>
-            <!------------------------------------------------------ Search----------------------------------------------------------->
+        <div class="registerLogo">
+            <!----- attribute to https://worldvectorlogo.com/downloaded/amazon-2 ---->
+            <img src="./assest/img/OIP.jfif">
+        </div>
 
+        <div class="registerBox">
+            <h1>Sign-in</h1>
+            <form class="registerForm">
 
-    </header>
-
-
-
-    <body>
-        <!---------------leftsidebars------------------->
-        <div class="leftsidebar">
-
-            <div class="userName">
-                <img id="userImage" src="./assest/img/IMG_20191210_074934.jpg">
                 <br>
-                <h2>Welcome <br> Back</h2>
-                <br>
-                <h1>Miles Davis</h1>
-            </div>
+                <h3>Your name</h3>
+                <input type="text" name="full-name" class="input" placeholder="Enter in your fullname" id="regFirstName">
+                <h3>Email</h3>
+                <input type="text" name="user-mail" class="input" placeholder="Enter in your email" id="regMail">
+                <h3>Phone number</h3>
+                <input type="text" name="phone-number" class="input" placeholder="Enter in your phone number" id="regPhonenumber">
+                <h3>Password</h3>
+                <input type="password" name="password" class="input" placeholder="Enter in your password" id="regPassword">
+                <h3>Re-enter password</h3>
+                <input type="confirmpassword" name="confirmpassword" class="input" placeholder="Re-enter your password " id="regPasswordconfirm">
 
-            <div class="leftsidebar_table">
-                <table>
-                    <tr span="1">
-                        <!----- KINDLE ICON----->
-                        <td colspan="2">
-                            <p> <img id="kindleIcon" src="./assest/img/kindle-icon.png"> My Kindle Board </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
 
-                            <p> <img src="./assest/img/icon/cube.svg"> Collections</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p> <img src="./assest/img/icon/bookmark.svg"> Saved</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
+            </form>
+            <h3>Upload profile image</h3>
+            <input type="file" accept="image/png ,image/jpg" id="imageInput">
+            <img src="" id="userImage1" width="100" height="100">
+            <p>
+                By continuing, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>
+            </p>
+            <button class="register_registerButton" onclick="registration()"> Continue </button>
 
-                            <p> <img src="./assest/img/icon/profile.png"> Profile</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p> <img src="./assest/img/icon/logout.svg"> Logout</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
+            <p>Already have an account? <a href="./login.html">Sign-In</a> </p>
+        </div>
 
-                        </td>
-                    </tr>
-                </table>
-
-                <table>
-                    <tr>
-                        <td>
-                            <img id="productAmazon" src="./assest/img/Untitled.png">
-                        </td>
-                    </tr>
-
-                </table>
-
+        <div class="legal">
+            <div>
+                <h6>© 1996-2022, Amazon.com, Inc. or its affiliates</h6>
             </div>
 
         </div>
 
-
-
-
-        <!----------------Recent books------------------->
-        <!----------------This portion will use the Jquery API for animation------------------->
-        <h2 id="scrollRecentitle"> Books you read last</h2>
-
-        <!----------------Recent books------------------->
-
-
-        <div class="container">
-            <div class="horizontal-scroll">
-                <button class="btn-scroll" id="btn-scroll-left" onclick="scrollHorizontally(1)"><i class="fas fa-chevron-left"></i></button>
-                <button class="btn-scroll" id="btn-scroll-right" onclick="scrollHorizontally(-1)"><i class="fas fa-chevron-right"></i></button>
-                <div class="storys-container">
-                    <div class="story-circle">
-                        <div class="colorb1">
-                            <div class="wordsb1">
-                                <font size="-1">
-                                    <h4>
-                                        Strategic Storytelling
-                                    </h4>
-                                    <p>101 pages.chapter12.Last read</p>
-                                </font>
-
-                                <div class="bookimg1"><img src="./assest/books/book1.jpg"></div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="story-circle1">
-                        <div class="colorb2">
-                            <div class="wordsb2">
-                                <font size="-1">
-                                    <h4>
-                                        The Intelligent Investor
-                                    </h4>
-                                    <p>101 pages.chapter12.Last read</p>
-                                </font>
-
-                                <div class="bookimg2"><img src="./assest/books/book3.jpg"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="story-circle2">
-                        <div class="colorb3">
-                            <div class="wordsb3">
-                                <font size="-1">
-                                    <h4>
-                                        Valuation
-                                    </h4>
-                                    <p>101 pages.chapter12.Last read</p>
-                                </font>
-
-                                <div class="bookimg3"><img src="./assest/books/book4.jpg"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="story-circle3">
-                        <div class="colorb4">
-                            <div class="wordsb4">
-                                <font size="-1">
-                                    <h4>
-                                        Forecasting Principles and Practice
-                                    </h4>
-                                    <p>101 pages.chapter12.Last read</p>
-                                </font>
-
-                                <div class="bookimg4"><img src="./assest/books/book5.jpg"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="story-circle4">
-                        <div class="colorb5">
-                            <div class="wordsb5">
-                                <font size="-1">
-                                    <h4>
-                                        Deep Learning
-                                    </h4>
-                                    <p>101 pages.chapter12.Last read</p>
-                                </font>
-
-                                <div class="bookimg5"><img src="./assest/books/book6.jpg"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="story-circle5">
-                        <div class="colorb6">
-                            <div class="wordsb6">
-                                <font size="-1">
-                                    <h4>
-                                        The Cybernatics Moment
-                                    </h4>
-                                    <p>101 pages.chapter12.Last read</p>
-                                </font>
-
-                                <div class="bookimg6"><img src="./assest/books/book7.jpg"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="story-circle6">
-                        <div class="colorb7">
-                            <div class="wordsb7">
-                                <font size="-1">
-                                    <h4>
-                                        Snapshot From Hell
-                                    </h4>
-                                    <p>101 pages.chapter12.Last read</p>
-                                </font>
-
-                                <div class="bookimg7"><img src="./assest/books/book8.jpg"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="story-circle7">
-                        <div class="colorb8">
-                            <div class="wordsb8">
-                                <font size="-1">
-                                    <h4>
-                                        Machine Learning Yearning
-                                    </h4>
-                                    <p>101 pages.chapter12.Last read</p>
-                                </font>
-
-                                <div class="bookimg8"><img src="./assest/books/book2.jpg"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="story-circle8">
-                        <div class="colorb9">
-                            <div class="wordsb9">
-                                <font size="-1">
-                                    <h4>
-                                        Monkey Business
-                                    </h4>
-                                    <p>101 pages.chapter12.Last read</p>
-                                </font>
-
-                                <div class="bookimg9"><img src="./assest/books/book9.jpg"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="story-circle9">
-                        <div class="colorb10">
-                            <div class="wordsb10">
-                                <font size="-1">
-                                    <h4>
-                                        Startup Nation
-                                    </h4>
-                                    <p>101 pages.chapter12.Last read</p>
-                                </font>
-
-                                <div class="bookimg10"><img src="./assest/books/book10.jpg"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </div>
 
 
 
 
 
 
-        <!------------------ New Releases------------------------->
-        <div class="NewReleases">
-            <h2 id="NewReleasestitle">New Releases</h2>
-            <!------------------ content------------------------->
-
-            <div class="rowReleses">
-
-                <div class="columnReleases">
-
-                    <img src="./assest/img/book1.jpg">
-
-                    <h3>Barbarians At The Gate</h3>
-                    <p>
-                        Bryan Burrough & John Helyar
-                    </p>
-                    <button>
-                    <p>
-                        Business
-                    </p>
-                    </button>
-                </div>
-
-                <div class="columnReleases">
-
-                    <img src="./assest/img/book2.jpg">
-
-                    <h3>Basic Economics</h3>
-                    <p>
-                        Thomas Sowell
-                    </p>
-                    <button>
-                    <p>
-                        Business
-                    </p>
-                </button>
-
-                </div>
-
-                <div class="columnReleases">
-
-                    <img src="./assest/img/book6.jpg">
-
-                    <h3>Deep Learning</h3>
-                    <p>
-                        I. Goodfellow & Y. Bengio & A. Courville
-                    </p>
-                    <button>
-                    <p>
-                        Engineering
-                    </p>
-                </button>
-                </div>
-
-                <div class="columnReleases">
-
-                    <img src="./assest/img/book4.jpg">
-
-                    <h3>Numerical Methods for Engieering</h3>
-                    <p>
-                        Karl F. Warnick
-                    </p>
-                    <button>
-                    <p>
-                        Engineering
-                    </p>
-                </button>
-                </div>
-
-                <div class="columnReleases">
-
-                    <img src="./assest/img/book5.jpg">
-
-                    <h3>The Mind Of The Strategist</h3>
-                    <p>
-                        Kenichi Ohmae
-                    </p>
-                    <button>
-                    <p>
-                        Business
-                    </p>
-                    </button>
-                </div>
-
-            </div>
-        </div>
-        <!---------------rightsidebars------------------->
-
-        <div class="rightsidebar">
-            <h2>Famous Authors</h2>
-
-            <table id="rightsidebarTable" cellpadding="2" cellspacing="2">
-                <tr colspan="2">
-                    <td>
-                        <img src="./assest/authors/rowlings.webp">
-                    </td>
-                    <td style="padding-left:30px;">
-                        <h3>J.K. Rowling</h3>
-                        <p>10 Books</p>
-                    </td>
-                </tr>
-                <tr colspan="2">
-                    <td>
-                        <img src="./assest/authors/king.jpg">
-                    </td>
-                    <td style="padding-left:30px;">
-                        <h3>Stephan King</h3>
-                        <p>61 Novels</p>
-                    </td>
-                </tr>
-                <tr colspan="2">
-                    <td>
-                        <img src="./assest/authors/steel.jpeg">
-                    </td>
-                    <td style="padding-left:30px;">
-                        <h3>Danielle Steel</h3>
-                        <p>179 Books</p>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <!------------------ New Authors------------------------->
-        </div>
-
-        <script>
-            let currentScrollPosition = 0;
-            let scrollAmount = 400;
-            const sCont = document.querySelector(".storys-container");
-            const hScroll = document.querySelector(".horizontal-scroll");
-            const btnScrollLeft = document.querySelector("#btn-scroll-left");
-            const btnScrollRight = document.querySelector("#btn-scroll-right");
-            btnScrollLeft.style.opacity = "0";
-
-            let maxScroll = -sCont.offsetWidth + hScroll.offsetWidth;
-
-            function scrollHorizontally(val) {
-                currentScrollPosition += (val * scrollAmount);
-                sCont.style.left = currentScrollPosition + "px";
-                if (currentScrollPosition >= 0) {
-                    currentScrollPosition = 0
-                    btnScrollLeft.style.opacity = "0";
-                } else {
-                    btnScrollLeft.style.opacity = "1";
-                }
-                if (currentScrollPosition <= maxScroll) {
-                    currentScrollPosition = maxScroll;
-                    btnScrollRight.style.opacity = "0";
-
-                } else {
-                    btnScrollRight.style.opacity = "1";
-                }
-                sCont.style.left = currentScrollPosition + "px";
-            }
-        </script>
 
 
-    </body>
 
-    <footer>
-
-    </footer>
 
 </body>
 
+<!------------------------------------------------ Call  Javascript here src ="./index.js "------------------------------------------------------------>
+<!----------------------------------------------- function is only for profile image------------------------------------------------------------>
+<script src="./script.js ">
+</script>
+<!------------------------------------------------ Call  Javascript here src ="./index.js "------------------------------------------------------------>
 
 <footer>
 
 </footer>
-
 
 </html>

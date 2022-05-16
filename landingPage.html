@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" name="Landing Page">
+    <title>Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+
+
+<body onload="addEvents()">
+    <div id="wrapper">
+        <!-- <div id="Logo-Header">
+                                <h1>Kindle</h1>
+
+                        </div> -->
+        <div id="Body-Section">
+            <div id="Left-Navigation">
+                <div id="Identity">
+                    <img id="userImage" src="./assest/img/IMG_20191210_074934.jpg">
+                    <p>
+                        Welcome<br> Back<br>
+                        <p id="regFirstName" style="font-weight:bolder">User Name</p>
+                    </p>
+                </div>
+                <div id="Navigation">
+                    <ul style="list-style-type: none;padding: 5px 5px 5px 25px;">
+                        <li><img id="kindleIcon" src="./assest/img/kindle-icon.png">My Kindle Board</li>
+                        <li><img src="./assest/img/icon/cube.svg">Collections</li>
+                        <li><img src="./assest/img/icon/bookmark.svg">Saved</li>
+                        <li><img src="./assest/img/icon/profile.png">Profile</li>
+                        <li><img src="./assest/img/icon/logout.svg"><span style="padding-bottom:5px;">Logout</span></li>
+                        <!-- <li><a href="javascript:testBook()">Scroll</a></li> -->
+                    </ul>
+                </div>
+                <div id="Amazon Logo" style="width:100%;margin-top:4em; padding-right:3em;">
+                    <img src="./assest/img/Untitled.png" width="100%" height="100%">
+                </div>
+            </div>
+            <div id="Main-Section">
+                <div id="Top-Navigation">
+                    <!-- <div style="height:50%;width:100%;"></div> -->
+                    <div id="Search-Bar">
+                        <div style="width:20%;height:100%;float:left">
+                            <p style="font-weight: bold;">
+                                Kindle<em style="color: orange;font-size: large;">.</em>
+                            </p>
+                        </div>
+                        <div id="Search">
+                            <div style="width: 50%;height:100%;float:left;">
+                                <input type="text" placeholder="   Search your books">
+                                <button type="button"></button>
+                            </div>
+                            <div style="width: 50%;height:100%;float:right;">
+                                <ul style="list-style-type: none;margin:4px 0px 0px 10px; padding:0px;display:flex;align-items: center;">
+                                    <li>New Release <em style="color: orange;font-size: large;padding:0px;">&bull;</em></li>
+                                    <li>Featured</li>
+                                    <li><img src="./assest/img/grid-fill.svg "></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="Content-Section">
+                    <div id="Last-Read">
+                        <div style="max-width:100%;min-width: 20%;height:30px;">
+                            <p style="margin:0px;padding:0px;font-weight: bold;">
+                                Books you read last
+                                <button type="button" id="Scroll-Left"></button>
+                                <button type="button" id="Scroll-Right"></button>
+                            </p>
+                            <div id="Read-Books-Section">
+                                <!-- <button class="btn-scroll" id="btn-scroll-left"><i class="fas fa-chevron-left"></i></button>
+                                                                        <button class="btn-scroll" id="btn-scroll-right"><i class="fas fa-chevron-right"></i></button> -->
+
+                                <div class="Read-Book">
+                                    <div class="Top-Half">
+
+                                    </div>
+                                    <div class="Bottom-Half" style="background-image: linear-gradient(to bottom right, white, #2b2525);">
+                                        <div class="Read-Book-Content">
+                                            <p class="Book-Title">
+                                                Strategic Storytelling<br>
+                                            </p>
+                                            <p class="Book-Details">
+                                                101 pages &bull; Chapter 12 &bull; Last Read
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                    <img src="./assest/books/book1.jpg">
+                                </div>
+                                <div class="Read-Book">
+                                    <div class="Top-Half">
+
+                                    </div>
+                                    <div class="Bottom-Half" style="background-image: linear-gradient(to bottom right, #B6CEB6, #0C71B5);">
+                                        <p class="Book-Title">
+                                            The Intelligent Investor<br>
+                                        </p>
+                                        <p class="Book-Details">
+                                            101 pages &bull; Chapter 12 &bull; Last Read
+                                        </p>
+                                    </div>
+                                    <img src="./assest/books/book3.jpg">
+                                </div>
+                                <div class="Read-Book">
+                                    <div class="Top-Half">
+
+                                    </div>
+                                    <div class="Bottom-Half" style="background-image: linear-gradient(to bottom right, #A31C20, #10080E);">
+                                        <p class="Book-Title">
+                                            Valuation<br>
+                                        </p>
+                                        <p class="Book-Details">
+                                            101 pages &bull; Chapter 12 &bull; Last Read
+                                        </p>
+                                    </div>
+                                    <img src="./assest/books/book4.jpg">
+                                </div>
+                                <div class="Read-Book">
+                                    <div class="Top-Half">
+
+                                    </div>
+                                    <div class="Bottom-Half" style="background-image: linear-gradient(to bottom right, #206A35, #D7CA68);">
+                                        <p class="Book-Title">
+                                            Forecasting Principles and<br> Practice<br>
+                                        </p>
+                                        <p class="Book-Details">
+                                            101 pages &bull; Chapter 12 &bull; Last Read
+                                        </p>
+                                    </div>
+                                    <img src="./assest/books/book5.jpg">
+                                </div>
+                                <div class="Read-Book">
+                                    <div class="Top-Half">
+
+                                    </div>
+                                    <div class="Bottom-Half" style="background-image: linear-gradient(to bottom right, #2B132E, #6E9FC8);">
+                                        <div class="Read=Book-Content">
+                                            <p class="Book-Title" id="A01">
+                                                Deep Learning<br>
+                                            </p>
+                                            <p class="Book-Details">
+                                                101 pages &bull; Chapter 12 &bull; Last Read
+                                            </p>
+                                        </div>
+
+
+                                    </div>
+                                    <img src="./assest/books/book6.jpg">
+                                </div>
+                                <div class="Read-Book">
+                                    <div class="Top-Half">
+
+                                    </div>
+                                    <div class="Bottom-Half" style="background-image: linear-gradient(to bottom right, #540F4D, #868686);">
+                                        <div class="Read=Book-Content">
+                                            <p class="Book-Title">
+                                                The Cybernatics Moment<br>
+                                            </p>
+                                            <p class="Book-Details">
+                                                101 pages &bull; Chapter 12 &bull; Last Read
+                                            </p>
+                                        </div>
+
+
+                                    </div>
+                                    <img src="./assest/books/book7.jpg">
+                                </div>
+                                <div class="Read-Book">
+                                    <div class="Top-Half">
+
+                                    </div>
+                                    <div class="Bottom-Half" style="background-image: linear-gradient(to bottom right, #FFFFFF, #C0483F);">
+                                        <div class="Read=Book-Content">
+                                            <p class="Book-Title">
+                                                Snapshot From Hell<br>
+                                            </p>
+                                            <p class="Book-Details">
+                                                101 pages &bull; Chapter 12 &bull; Last Read
+                                            </p>
+                                        </div>
+
+
+                                    </div>
+                                    <img src="./assest/books/book8.jpg">
+                                </div>
+                                <div class="Read-Book">
+                                    <div class="Top-Half">
+
+                                    </div>
+                                    <div class="Bottom-Half" style="background-image: linear-gradient(to bottom right, #DDF0F7, #7CA1C6);">
+                                        <div class="Read=Book-Content">
+                                            <p class="Book-Title">
+                                                Machine Learning Yearning<br>
+                                            </p>
+                                            <p class="Book-Details">
+                                                101 pages &bull; Chapter 12 &bull; Last Read
+                                            </p>
+                                        </div>
+
+
+                                    </div>
+                                    <img src="./assest/books/book2.jpg">
+                                </div>
+                                <div class="Read-Book">
+                                    <div class="Top-Half">
+
+                                    </div>
+                                    <div class="Bottom-Half" style="background-image: linear-gradient(to bottom right, #6681B0, #C7DAFA);">
+                                        <div class="Read=Book-Content">
+                                            <p class="Book-Title">
+                                                Monkey Business<br>
+                                            </p>
+                                            <p class="Book-Details">
+                                                101 pages &bull; Chapter 12 &bull; Last Read
+                                            </p>
+                                        </div>
+
+
+                                    </div>
+                                    <img src="./assest/books/book9.jpg">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="Bottom-Section">
+                        <div id="New-Release">
+                            <div style="width:100%;height:30px;">
+                                <p style="padding:0px;margin:0px;font-weight: bold;">
+                                    New Release
+                                </p>
+                            </div>
+                            <div id="New-Books-Section">
+
+
+                            </div>
+
+                        </div>
+                        <div id="Famous-Authors">
+                            <p style="font-weight: bold; text-align: center;margin-top: 20px;">
+                                Famous Authors
+                            </p>
+                            <ul style="padding:0px;margin-left: 30px;">
+                                <li style="list-style-type: none;">
+                                    <img src="./assest/authors/rowlings.webp">
+
+                                    <p>
+                                        <span class="F-Author-Name">J.K. Rowling</span><br><span class="F-Author-Books">10 books</span>
+                                    </p>
+                                </li>
+                                <li style="list-style-type: none;">
+                                    <img src="./assest/authors/king.jpg">
+
+                                    <p>
+                                        <span class="F-Author-Name">Stephan King</span><br><span class="F-Author-Books">61 Novels</span>
+                                    </p>
+                                </li>
+                                <li style="list-style-type: none;">
+                                    <img src="./assest/authors/steel.jpeg">
+
+                                    <p>
+                                        <span class="F-Author-Name">Danielle Steel</span><br><span class="F-Author-Books">179 Books</span>
+                                    </p>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="./script.js">
+</script>
+
+</html>

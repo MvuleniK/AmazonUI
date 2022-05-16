@@ -3,12 +3,10 @@
 
 <head>
     <title>Amazon Login Page</title>
-    <link rel="stylesheet" href="./style2.css">
+    <link rel="stylesheet" href="./style0.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./index.js">
+    <script src="./script.js">
     </script>
-
-
 </head>
 
 
@@ -18,23 +16,16 @@
     <div class="login">
 
         <div class="loginLogo">
-            <!----- attribute to https://worldvectorlogo.com/downloaded/amazon-2 ---->
             <img src="./assest/img/OIP.jfif">
         </div>
 
         <div class="loginBox">
             <h1>Sign-in</h1>
-            <form class="loginForm" method="GET" action="./index.html">
+            <form class="loginForm" method="GET" action="./landingPage.html">
                 <h3>E-mail</h3>
                 <input type="text" name="user-mail" class="input" placeholder="Enter in your email" id="logEmail">
                 <h3>Password</h3>
                 <input type="password" name="password" class="input" placeholder="Password " id="logPassword">
-                <!--------*checkbox might not be needed! 
-                    <div id="remember">
-                        <input type="checkbox" value="lsRememberMe" id="rememberMe"
-                               style="display: inline-block;">
-                        <label>Remember me</label>
-                    </div>----->
 
                 <button class="loginSignInButton" onclick="login()">Sign In</button>
             </form>
