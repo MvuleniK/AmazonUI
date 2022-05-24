@@ -12,9 +12,9 @@ class Book {
 }
 
 const books = [
-    new Book("Barbarians At The Gate", "Bryan Burrough & John Helyar", "Business", "./assest/img/book1.jpg"),
-    new Book("Basic Economics", "Thomas Sowell", "Business", "./assest/img/book2.jpg"),
-    new Book("Deep Learning", "I. Goodfellow & Y. Bengio & A. Courville", "Engineering", "./assest/img/book6.jpg"),
+    new Book("Barbarians At The Gate", "Bryan Burrough", "Business", "./assest/img/book1.jpg"),
+    new Book("	Principles of ANN's ", "Daniel Graupe", "Engineering", "./assest/img/book9.jpg"),
+    new Book("The McKinsey Way", "	Ethan M. Rasiel", "Business", "./assest/img/book10.jpg"),
     new Book("NM for Engieering", "Karl F. Warnick", "Engineering", "./assest/img/book4.jpg"),
     new Book("The Mind Of The Strategist", "Kenichi Ohmae", "Business", "./assest/img/book5.jpg")
 ];
