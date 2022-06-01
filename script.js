@@ -10,6 +10,7 @@ class Book {
         this.book_ISBN = ISBN;
         this.book_price = price;
         this.book_Tag = tag;
+        this.amount = 0;
         this.image_Location = image;
     }
 }
@@ -67,9 +68,10 @@ const books = [
     " the basis for all strategic thinking and planning.","0070479046",500, "Business", "./assest/img/book5.jpg")
 ];
 
-
-
-
+var currentBook = -1;
+let cart = [];
+var myCartArray = [];
+localStorage.setItem("total","0");
 
 let currentScrollPosition = 0;
 let scrollAmount = 400;
@@ -139,6 +141,7 @@ function addEvents() {
     
     const cart_increase = document.getElementById("cartIncrease");
     const cart_decrease = document.getElementById("cartDecrease");
+    
 
     scrollSection.addEventListener("wheel", (evt) => {
         evt.preventDefault();
@@ -156,7 +159,7 @@ function addEvents() {
     loadBooks();
     changeName();
     changeImage();
-    // modelBox();
+    modelBox();
 
     // const modal_buttton = document.getElementsByClassName("btn btn-info btn-lg")[0];
     // modal_buttton.click();
@@ -219,6 +222,56 @@ function loadBooks() {
         },false);
     }
 }
+
+function calculateTotal() {
+    let total_price = 0;
+    for(let i = 0; i < myCartArray.length; i++) {
+        total_price += myCartArray[i].book_price*myCartArray[i].amount;
+    }
+
+    return total_price;
+}
+function isInCart() {
+    for(let i = 0; i < myCartArray.length; i++) {
+        if(myCartArray[i].book_Name == books[currentBook].book_Name) {
+            return true;
+        }
+    }
+    return false;
+}
+function saveToCart() {
+
+    const cart_counter = document.getElementById("usr");
+    if(isInCart()) {
+        books[currentBook].amount = parseInt(cart_counter.value);
+    } else {
+        myCartArray.push(books[currentBook]);
+    }
+    localStorage.setItem("myCart", JSON.stringify(myCartArray));
+    let total = Number(localStorage.getItem("total"));
+    
+    if (total === null) {
+        // Save it to the localStorage cart
+        localStorage.setItem("total",calculateTotal());
+    } else {
+        total = calculateTotal();
+        localStorage.setItem("total", total);
+        // The product wasn't found... maybe someone tampered with the HTML?
+    }
+    alert('You added ' + books[currentBook].book_Name + ' to your cart.');
+    console.log(myCartArray);
+    window.location = "./cart.html";
+    /*console.log(myItem.name);
+    console.log(myItem.price);
+    console.log(myItem.img);*/
+
+ /*  const productId = target.dataset.id;
+  const product = products.find((i) => i.id === productId);
+  console.debug(product) */;
+  
+
+}
+
 function generatePopup(book_number) {
     const modal = document.getElementById("myModal");
     const modal_table = document.getElementById("modalTable");
@@ -231,11 +284,13 @@ function generatePopup(book_number) {
     modal_table.rows[4].innerHTML = "<td>" + books[book_number].book_description + "</td>";
 
     modal_image.src = books[book_number].image_Location;
-}
 
+    currentBook = book_number;
+}
 
 function modalCounter(amount) {
     const cart_counter = document.getElementById("usr");
+
 
     if(cart_counter.value > 0 ) {
         if(amount == 1) {
@@ -245,73 +300,30 @@ function modalCounter(amount) {
             cart_counter.value = parseInt(cart_counter.value) - 1;
         }
     }
+    books[currentBook].amount = parseInt(cart_counter.value);
 }
 
 
 
-
-
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////// Cart page scripts
+////////////////////// function of the cart
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// // let cart = [];
 
+// function cartAdd(){
+//     //check if product already exist in cart
+//     // if(cart.some())
+//     console.log(books[currentBook]);
+//     cart.push(currentBook);
+//     console.log(cart);
+// }
 
-// let myProductItem = [item1, item2, item3, item4, item5, item6, item7, item8];
-
-// cart array
-
-let myCartArray = [];
-
-function saveToCart() {
-	// event.preventDefault();
-    // const target = event.target;
-    // const alreadyInCart=mycart.checkIfItemExists()
-    myCartArray.push(books);
-    localStorage.setItem("myCartArray", JSON.stringify(myCartArray));
-    let total = Number(localStorage.getItem("total"));
-    
-    if (total === null) {
-        // Save it to the localStorage cart
-        localStorage.setItem("total",books.price)
-    } else {
-        total += Number(myItem.price);
-        localStorage.setItem("total", myItem.price);
-        // The product wasn't found... maybe someone tampered with the HTML?
-    }
-    alert('You added ' + myItem.name + ' to your cart.')
-    /*console.log(myItem.name);
-    console.log(myItem.price);
-    console.log(myItem.img);*/
-
-  const productId = target.dataset.id;
-  const product = products.find((i) => i.id === productId);
-  console.debug(product);
-  
-
-}
-
-
-
-$('.addtocart').on('click', saveToCart);
-
-const container = $(".books");
-
-books.forEach((i) =>{
-    container.append(`
-<div class="card">
-    <img src="${i.image}" class="card-img-top" />
-  <div class="card-body">
-      <div class="card-title">${i.book_name}</div>
-      <p class="card-text">$${i.price}</p>
-    <footer><button class="btn btn-primary addtocart" data-id="${i.tag}">Buy Now</button></footer>
-  </div>
-</div>
-    `);
-});
-
-
-
+// // function addToCard(id) {
+// //     var output = "Book number" + id;
+// //     consolw.log(output);
+// // }
+ 
 
 
 
@@ -350,6 +362,9 @@ books.forEach((i) =>{
 // }
 // html += "</table>";
 // document.getElementById("cartSection").innerHTML = html;
+
+
+
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////

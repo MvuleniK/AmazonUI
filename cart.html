@@ -2,7 +2,8 @@
 <html>
 
     <head>
-    <script src="./cart.js"></script>    
+    <script src="./cart.js"></script>
+    <link rel="stylesheet" href="./cart.css">    
     <title>
         cart page
     </title>
@@ -11,20 +12,24 @@
 
     <body>
 
-        
+
+
+
         <form id="shopping-cart" action="cart.html" method="post">
+            <h1 class="title">Shopping Cart</h1>
             <table class="shopping-cart">
                 <thead>
                     <tr>
                         <th scope="col">Item</th>
                         <th scope="col">Qty</th>
                         <th scope="col">Price</th>
+                        <th scope="col">Remove</th>
                     </tr>
                 </thead>
                 <tbody></tbody>
             </table>
             <p id="sub-total">
-                <strong>Sub Total</strong>: <span id="stotal"></span>
+                <strong>Sub Total:</strong> <span id="stotal"></span>
             </p>
             <ul id="shopping-cart-actions">
                 <li>
@@ -34,12 +39,22 @@
                     <input type="submit" name="delete" id="empty-cart" class="btn" value="Empty Cart" />
                 </li>
                 <li>
-                    <a href="index.html" class="btn">Continue Shopping</a>
-                </li>
-                <li>
-                    <a href="checkout.html" class="btn">Go To Checkout</a>
+
                 </li>
             </ul>
+            <div class="bottom-cart-row">
+                <div class="bottom-cart-column">
+                    <button id="continue-shopping">
+                        <a style="text-decoration: none;" href="./landingPage.html" class="btn">Continue Shopping</a>
+                    </button>
+                </div>
+                <div class="bottom-cart-column">
+                    <button id="check-out" >
+                        <a style="text-decoration: none;"s href="checkout.html" class="btn">Go To Checkout</a>
+                    </button>
+                </div>
+            </div>
+
         </form>
 
 
