@@ -3,7 +3,8 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 class Book {
-    constructor(book_name, author_name, description, ISBN,price, tag, image) {
+    constructor(id,book_name, author_name, description, ISBN,price, tag, image) {
+        this.id = id;
         this.book_Name = book_name;
         this.author_Name = author_name;
         this.book_description = description;
@@ -16,14 +17,14 @@ class Book {
 }
 
 const books = [
-    new Book("Barbarians At The Gate", "Bryan Burrough","A #1 New York Times bestseller and arguably the best business narrative ever written"+
+    new Book(0,"Barbarians At The Gate", "Bryan Burrough","A #1 New York Times bestseller and arguably the best business narrative ever written"+
     ", Barbarians at the Gate is the classic account of the fall of RJR Nabisco. An enduring masterpiece of investigative journalism by"+
     " Bryan Burrough and John Helyar, it includes a new afterword by the authors that brings this remarkable story of greed and "+
     "double-dealings up to date twenty years after the famed deal. The Los Angeles Times calls Barbarians at the Gate, “Superlative.” "+
     "The Chicago Tribune raves, “It’s hard to imagine a better story...and it’s hard to imagine a better account.” "+
     "And in an era of spectacular business crashes and federal bailouts, it still stands as a valuable cautionary tale that must be heeded."
     ,"0099469154",500, "Business", "./assest/img/book1.jpg"),
-    new Book("Principles Of Artificial Neural Networks", "Daniel Graupe","The field of Artificial Neural Networks is the fastest growing field in Information Technology and specifically," + 
+    new Book(1,"Principles Of Artificial Neural Networks", "Daniel Graupe","The field of Artificial Neural Networks is the fastest growing field in Information Technology and specifically," + 
     " in Artificial Intelligence and Machine Learning.This must-have compendium presents the theory and case studies o" + 
     " artificial neural networks. The volume, with 4 new chapters, updates the earlier edition by highlighting recent" + 
     " developments in Deep-Learning Neural Networks, which are the recent leading approaches to neural networks. " + 
@@ -31,7 +32,7 @@ const books = [
     " studies are designed, executed and how their results are obtained.The title is written for a one-semester graduate" + 
     " or senior-level undergraduate course on artificial neural networks. It is also intended to be a self-study and a " + 
     " reference text for scientists, engineers and for researchers in medicine, finance and data mining.","9811201226",500, "Engineering", "./assest/img/book9.jpg"),
-    new Book("The McKinsey Way", "	Ethan M. Rasiel","When Fortune 100 corporations are stymied, it's the \"McKinsey-ites\" whom they call for help. In THE MCKINSEY WAY, former McKinsey" +
+    new Book(2,"The McKinsey Way", "	Ethan M. Rasiel","When Fortune 100 corporations are stymied, it's the \"McKinsey-ites\" whom they call for help. In THE MCKINSEY WAY, former McKinsey" +
     " associate Ethan Rasiel lifts the veil to show you how the secretive McKinsey works its magic, and helps you emulate the firm's" +
     " well-honed practices in problem solving, communication, and management." +
     "\n" +
@@ -48,7 +49,7 @@ const books = [
     "Both a behind-the-scenes look at one of the most admired and secretive companies in the business world and a toolkit of problem-solving" +
     " techniques without peer, THE MCKINSEY WAY is fascinating reading that empowers every business decision maker to become a better strategic" +
     " player in any organization.","9780070534483",500, "Business", "./assest/img/book10.jpg"),
-    new Book("Numerical Methods for Engieering", "Karl F. Warnick","This textbook teaches students to create computer codes used to engineer antennas, microwave circuits, and other critical" + 
+    new Book(3,"Numerical Methods for Engieering", "Karl F. Warnick","This textbook teaches students to create computer codes used to engineer antennas, microwave circuits, and other critical" + 
     " technologies for wireless communications and other applications of electromagnetic fields and waves. Worked code examples" + 
     " are provided for MATLAB technical computing software. It is the only textbook on numerical methods that begins at the" + 
     " undergraduate engineering student level but brings students to the state-of-the-art by the end of the book. It focuses" + 
@@ -59,7 +60,7 @@ const books = [
     " (particularly integral equations and the method of moments) and where the treatment is not accessible to students without" + 
     " an advanced theory course. Important topics include: Method of Moments; Finite Difference Time Domain Method; Finite" + 
     " Element Method; Finite Element Method-Boundary Element Method; Numerical Optimization; and Inverse Scattering.","1891121995",500, "Engineering", "./assest/img/book4.jpg"),
-    new Book("The Mind Of The Strategist", "Kenichi Ohmae","This book, full of actual examples, aims to bring to life all of the dynamic, subtlety, and variety of business strategy" + 
+    new Book(4,"The Mind Of The Strategist", "Kenichi Ohmae","This book, full of actual examples, aims to bring to life all of the dynamic, subtlety, and variety of business strategy" + 
     " as it is practiced in the real world and in real companies. The author does not purport to be inventing strategy in" + 
     " this book or to be revealing the secrets of Japanese business and strategic planning. Rather, he is exploring with" + 
     " the reader the ways in which the strategist must think, the key principles and thought patterns that real-world" + 
@@ -68,10 +69,20 @@ const books = [
     " the basis for all strategic thinking and planning.","0070479046",500, "Business", "./assest/img/book5.jpg")
 ];
 
+const productsEl = document.querySelector(".products");
+const cartItemsEl = document.querySelector(".cart-items");
+const subtotalEl = document.querySelector(".subtotal");
+const totalItemsInCartEl = document.querySelector(".total-items-in-cart");
+
+localStorage.clear();
+
 var currentBook = -1;
 let cart = [];
-var myCartArray = [];
+// var myCartArray = [];
+let myCartArray = JSON.parse(localStorage.getItem("myCart")) || [];
 localStorage.setItem("total","0");
+
+updateCart();
 
 let currentScrollPosition = 0;
 let scrollAmount = 400;
@@ -138,9 +149,17 @@ function addEvents() {
     const right_arrow = document.getElementById("Scroll-Right");
     const left_arrow = document.getElementById("Scroll-Left");
     const image_input = document.querySelector("#imageInput");
+
+    
+
+    const to_cart = document.getElementById("shopping-cart");
     
     const cart_increase = document.getElementById("cartIncrease");
     const cart_decrease = document.getElementById("cartDecrease");
+
+    const remove_button = document.getElementById("removeFromCart");
+
+    const add_to_cart = document.getElementById("toCartButton");
     
 
     scrollSection.addEventListener("wheel", (evt) => {
@@ -149,23 +168,37 @@ function addEvents() {
     });
     left_arrow.addEventListener("click", scrollLeft, false);
     right_arrow.addEventListener("click", scrollRight, false);
-    cart_increase.addEventListener("click", function() {
-        modalCounter(1);
-    },false);
-    cart_decrease.addEventListener("click",function() {
-        modalCounter(-1);
-    },false);
+    // cart_increase.addEventListener("click", function() {
+    //     modalCounter(1);
+    // },false);
+    // cart_decrease.addEventListener("click",function() {
+    //     modalCounter(-1);
+    // },false);
+
+    // remove_button.addEventListener('click', function() {
+    //     removeFromCart(currentBook);
+    // },false);
+
+    // for(let i = 0; i < books.length; i++) {
+    //     add_to_cart.addEventListener('click', function() {
+    //         addToCart(i);
+    //     },false);
+    // }
+
+    to_cart.addEventListener('click',goToCart,false);
+
+    add_to_cart.addEventListener('click',saveToCart,false);
 
     loadBooks();
     changeName();
     changeImage();
-    modelBox();
+    // modelBox();
 
     // const modal_buttton = document.getElementsByClassName("btn btn-info btn-lg")[0];
     // modal_buttton.click();
 
     // generatePopup();
-
+    console.log(localStorage.getItem("myCart"));
 }
 
 function changeImage() {
@@ -222,15 +255,14 @@ function loadBooks() {
         },false);
     }
 }
+// function calculateTotal() {
+//     let total_price = 0;
+//     for(let i = 0; i < myCartArray.length; i++) {
+//         total_price += myCartArray[i].book_price*myCartArray[i].amount;
+//     }
 
-function calculateTotal() {
-    let total_price = 0;
-    for(let i = 0; i < myCartArray.length; i++) {
-        total_price += myCartArray[i].book_price*myCartArray[i].amount;
-    }
-
-    return total_price;
-}
+//     return total_price;
+// }
 function isInCart() {
     for(let i = 0; i < myCartArray.length; i++) {
         if(myCartArray[i].book_Name == books[currentBook].book_Name) {
@@ -239,9 +271,20 @@ function isInCart() {
     }
     return false;
 }
-function saveToCart() {
+// function removeFromCart(index) {
+//     for(let i = 0; i < myCartArray.length; i++) {
+//         if(books[index].book_Name == myCartArray[i].book_Name) {
+//             myCartArray.splice(index,1);
+//         }
+//     }
+// }
 
+function saveToCart() {
+	// event.preventDefault();
+    // const target = event.target;
+    // const alreadyInCart=mycart.checkIfItemExists()
     const cart_counter = document.getElementById("usr");
+    const close = document.getElementById("closebutton");
     if(isInCart()) {
         books[currentBook].amount = parseInt(cart_counter.value);
     } else {
@@ -253,14 +296,19 @@ function saveToCart() {
     if (total === null) {
         // Save it to the localStorage cart
         localStorage.setItem("total",calculateTotal());
-    } else {
-        total = calculateTotal();
-        localStorage.setItem("total", total);
-        // The product wasn't found... maybe someone tampered with the HTML?
-    }
-    alert('You added ' + books[currentBook].book_Name + ' to your cart.');
+    } 
+    //else {
+    //     total = calculateTotal();
+    //     localStorage.setItem("total", total);
+    //     // The product wasn't found... maybe someone tampered with the HTML?
+    // }
+    // alert('You added ' + books[currentBook].book_Name + ' to your cart.');
     console.log(myCartArray);
-    window.location = "./cart.html";
+
+    close.click();
+
+    localStorage.setItem("myCart", JSON.stringify(myCartArray));
+    
     /*console.log(myItem.name);
     console.log(myItem.price);
     console.log(myItem.img);*/
@@ -302,38 +350,141 @@ function modalCounter(amount) {
     }
     books[currentBook].amount = parseInt(cart_counter.value);
 }
+function goToCart() {
+    window.location = "./cart.html";
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////// function of the cart
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// // let cart = [];
 
-// function cartAdd(){
-//     //check if product already exist in cart
-//     // if(cart.some())
-//     console.log(books[currentBook]);
-//     cart.push(currentBook);
-//     console.log(cart);
+// SELECT ELEMENTS( HTML div tags )
+// const productsEl = document.querySelector(".products");
+// const cartItemsEl = document.querySelector(".cart-items");
+// const subtotalEl = document.querySelector(".subtotal");
+// const totalItemsInCartEl = document.querySelector(".total-items-in-cart");
+
+
+
+
+// add to cart
+
+// function saveToCart(
+// 	if(myCartArray.((item) => item.id)){
+// 		changeNumberOfUnits("plus", id);
+// 	}else{
+// 		const item = books[currentBook].find((cart) => cart.id === id);
+// 	}
+// 		myCartArray.push({
+// 			...item,
+// 			numberOfUnits: 1,
+// 		});
+		
+		
+// 	updateCart();	
+// // )
+
+// // ADD TO CART
+// function addToCart(id) {
+//     // check if prodcut already exist in cart
+//     if (cart.some((item) => item.id === id)) {
+//       changeNumberOfUnits("plus", id);
+//     } else {
+//       const item = books.find((product) => product.id === id);
+  
+//       cart.push(books[id]);
+//     }
+  
+//     updateCart();
+//     console.log("Aded to cart");
+//   }
+
+// // update cart
+// function updateCart() {
+//   renderCartItems();
+//   renderSubtotal();
+
+//   // save cart to local storage
+//   localStorage.setItem("myCart", JSON.stringify(myCartArray));
 // }
 
-// // function addToCard(id) {
-// //     var output = "Book number" + id;
-// //     consolw.log(output);
-// // }
- 
+
+// // Calculate and render subtotal
+
+// function renderSubtotal(){
+// 	  let totalPrice = 0,
+// 		totalItems = 0;
+// 	myCartArray.forEach((item) => {
+// 		totalPrice += item.book_price * item.amount;
+// 		totalItems += item.amount;
+// 	});
+	
+// 	subtotalEl.innerHTML = `Subtotal (${totalItems} items): $${totalPrice.toFixed(2)}`;
+// 	totalItemsInCartEl.innerHTML = totalItems;
+// }
+
+// // render the items in the cart page 
+
+
+// function renderCartItems() {
+//   cartItemsEl.innerHTML = ""; // clear cart element
+//   myCartArray.forEach((item) => {
+//     cartItemsEl.innerHTML += `
+//         <div class="cart-item">
+//             <div class="item-info" onclick="removeItemFromCart(${item.id})">
+//                 <img src="${item.image_Location}">
+//                 <h4>${item.book_Name}</h4>
+//             </div>
+//             <div class="unit-price">
+//                 <small>$</small>${item.book_price}
+//             </div>
+//             <div class="units">
+//                 <div class="btn minus" onclick="changeNumberOfUnits('minus', ${item.id})">-</div>
+//                 <div class="number">${item.amount}</div>
+//                 <div class="btn plus" onclick="changeNumberOfUnits('plus', ${item.id})">+</div>           
+//             </div>
+//         </div>
+//       `;
+//   });
+// }
+
+// // remove item from cart
+// function removeItemFromCart(id) {
+//   cart = myCartArray.filter((item) => item.id !== id);
+
+//   updateCart();
+// }
+
+
+// // change number of units for an item
+// function changeNumberOfUnits(action, id) {
+//   cart = myCartArray.map((item) => {
+//     let numberOfUnits = item.amount;
+
+//     if (item.id === id) {
+//       if (action === "minus" && amount > 1) {
+//         amount--;
+//     //   } else if (action === "plus" && numberOfUnits < item.instock) {
+//     } else if (action === "plus") {
+//         amount++;
+//       }
+//     }
+
+//     return {
+//       ...item,
+//       amount,
+//     };
+//   });
+
+//   updateCart();
+// }
+
 
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
 
 
 // let myCartItem = localStorage.getItem("myCartItem");

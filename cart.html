@@ -2,8 +2,11 @@
 <html>
 
     <head>
-    <script src="./cart.js"></script>
-    <link rel="stylesheet" href="./cart.css">    
+    <!-- <script src="./cart.js"></script> -->
+    <script src="./books.js" defer></script>
+    <script src="./cart.js" defer></script>
+    
+    <link rel="stylesheet" href="./cart_style.css">    
     <title>
         cart page
     </title>
@@ -12,10 +15,32 @@
 
     <body>
 
+        <div class="products-list">
+            <div class="products">
+                <!-- render porducts here -->
+            </div>
+            <div class="cart">
+                <div class="cart-header">
+                    <div class="column1">Item</div>
+                    <div class="column2">Unit price</div>
+                    <div class="column3">Units</div>
+                </div>
+                <div class="cart-items">
+                    <!-- render cart items here -->
+                </div>
+                <div class="cart-footer">
+                    <div class="subtotal">
+                        Subtotal (0 items): $0
+                    </div>
+                    <div class="checkout">
+                        Proceed to checkout
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-
-        <form id="shopping-cart" action="cart.html" method="post">
+        <!-- <form id="shopping-cart" action="cart.html" method="post">
             <h1 class="title">Shopping Cart</h1>
             <table class="shopping-cart">
                 <thead>
@@ -55,7 +80,7 @@
                 </div>
             </div>
 
-        </form>
+        </form> -->
 
 
     </body>
